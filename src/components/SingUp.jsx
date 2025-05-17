@@ -28,7 +28,7 @@ const SingUp = () => {
                 };
 
                 // ! save the user profile info to the database
-                fetch("http://localhost:3000/users", {
+                fetch("https://coffee-store-server-neon-beta.vercel.app/users", {
                     method: "POST",
                     headers: {
                         "content-type": "application/json",

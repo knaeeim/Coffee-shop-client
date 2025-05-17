@@ -17,7 +17,7 @@ const Users = () => {
             confirmButtonText: "Yes, delete it!",
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:3000/users/${id}`, {
+                fetch(`https://coffee-store-server-neon-beta.vercel.app/users/${id}`, {
                     method: "DELETE",
                 })
                     .then((res) => res.json())
@@ -26,7 +26,7 @@ const Users = () => {
                             setUsers(users.filter((user) => user._id !== id));
 
                             // TODO - User delete from firebase
-                            
+
 
                             Swal.fire({
                                 title: "Deleted!",
